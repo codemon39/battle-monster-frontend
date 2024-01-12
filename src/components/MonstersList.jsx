@@ -16,6 +16,7 @@ function MonstersList({ onSelect }) {
         console.log("Error from backend");
       });
   }, []);
+
   function monsterCard(playerMonster) {
     const computerMonster = data.find(
       (monster) => Number(monster.id) === random
