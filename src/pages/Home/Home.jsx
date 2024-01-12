@@ -4,7 +4,6 @@ import MonsterCard from "../../components/MonsterCard";
 import MonstersList from "../../components/MonstersList";
 import fetchData from "../../utils/util.js";
 import { Link } from "react-router-dom";
-import "./Home.css";
 
 const { Text } = Typography;
 
@@ -17,8 +16,8 @@ export default function Home() {
     setPlayerMonster(player);
     setComputerMonster(computer);
     const data = {
-      id1: player.id,
-      id2: computer.id,
+      playerid: player.id,
+      computerid: computer.id,
     };
     const res = await fetchData("/gameStart", data);
     setGameResult(res.data);
