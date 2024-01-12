@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Col, Flex, Image, Row } from "antd";
+import { Flex, Image, Typography } from "antd";
 import axios from "axios";
 import { useParams } from "react-router";
-import fetchData from "../config/util";
+
+const { Text } = Typography;
 export default function Winner() {
   const { id } = useParams();
   const [data, setData] = useState();
@@ -23,8 +24,10 @@ export default function Winner() {
 
   return (
     <>
-      {id == 0 ? (
-        <p className="text-center text-5xl">This game is tie!</p>
+      {id === "0" ? (
+        <Flex justify="center">
+          <Text className="text-5xl">This game is tie!</Text>
+        </Flex>
       ) : (
         <>
           <Flex className="m-auto text-5xl mt-10" justify="center">
@@ -33,7 +36,9 @@ export default function Winner() {
           <Flex justify="center">
             <Image src={data?.imageUrl} className="mt-10"></Image>
           </Flex>
-          <p className="text-center text-2xl">{data?.name}</p>
+          <Flex justify="center">
+            <Text className=" text-2xl">{data?.name}</Text>
+          </Flex>
         </>
       )}
     </>
