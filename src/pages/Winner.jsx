@@ -7,7 +7,6 @@ const { Text } = Typography;
 export default function Winner() {
   const { id } = useParams();
   const [data, setData] = useState();
-  console.log(id);
   useEffect(() => {
     axios({
       url: "http://localhost:5000/api/result",
