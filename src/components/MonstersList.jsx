@@ -31,7 +31,7 @@ function MonstersList({ onSelect }) {
           <Flex
             vertical
             onClick={() => monsterCard(val)}
-            className="monster-content xl:w-42 lg:w-32 md:w-28 sm:w-20 w-20 rounded-md m-4 shadow-[-2px_3px_10px_rgba(0,0,0,0.25)]"
+            className="monster-content xl:w-42 lg:w-32 md:w-28 sm:w-20 w-20 rounded-md m-4 shadow-[-2px_3px_10px_rgba(0,0,0,0.25)] hover:scale-110"
           >
             <Image
               className="rounded-md p-2 "
