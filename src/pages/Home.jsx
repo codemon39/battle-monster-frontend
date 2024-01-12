@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Row, Col, Typography, Flex, Button } from "antd";
-import MonsterCard from "../components/MonsterCard.jsx";
-import MonstersList from "../components/MonstersList.jsx";
-import fetchData from "../utils/util.js";
+import MonsterCard from "../components/MonsterCard";
+import MonstersList from "../components/MonstersList";
+import fetchData from "../utils/util";
 import { Link } from "react-router-dom";
 
 const { Text } = Typography;
