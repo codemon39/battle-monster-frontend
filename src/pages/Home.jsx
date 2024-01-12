@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Row, Col, Typography, Flex, Button } from "antd";
-import MonsterCard from "../../components/MonsterCard";
-import MonstersList from "../../components/MonstersList";
-import fetchData from "../../utils/util.js";
+import MonsterCard from "../components/MonsterCard.jsx";
+import MonstersList from "../components/MonstersList.jsx";
+import fetchData from "../utils/util.js";
 import { Link } from "react-router-dom";
 
 const { Text } = Typography;
@@ -16,8 +16,8 @@ export default function Home() {
     setPlayerMonster(player);
     setComputerMonster(computer);
     const data = {
-      playerid: player.id,
-      computerid: computer.id,
+      playerId: player.id,
+      computerId: computer.id,
     };
     const res = await fetchData("/gameStart", data);
     setGameResult(res.data);

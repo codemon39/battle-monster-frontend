@@ -30,8 +30,8 @@ export default function Winner() {
         </Flex>
       ) : (
         <>
-          <Flex className="m-auto text-5xl mt-10" justify="center">
-            W I N N E R !
+          <Flex className="m-auto " justify="center">
+            <Text className="text-5xl mt-10">W I N N E R !</Text>
           </Flex>
           <Flex justify="center">
             <Image src={data?.imageUrl} className="mt-10"></Image>
