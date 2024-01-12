@@ -1,5 +1,5 @@
 import axios from "axios";
-import { BACK_URL } from "./keys";
+import { BACK_URL } from "../config/keys";
 
 const fetchData = async (url, data) => {
   const res = await axios({
